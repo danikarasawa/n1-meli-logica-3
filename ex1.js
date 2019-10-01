@@ -97,3 +97,17 @@
 // for(let i = 0; i<n.length; i++){
 //     console.log(n[i])
 // };
+
+//LOOP DENTRO DO OUTRO + matriz 5 x 5
+
+const arr = [];
+let count = 1;
+for (let i = 0; i < 5; i++) {
+    const col = [];
+    for (let j = 0; j < 5; j++) {
+        col[j] = count;
+        count++
+    }
+    arr[i] = col
+}
+console.log(arr);
