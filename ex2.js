@@ -102,13 +102,21 @@ const dados = [
 // console.log(dadosLower);
 
 //CODIGO DAS MENINAS
-// let posicao = "";
-// for(let i=0; i < dados.length; i++){
-//     for(let j=0; j<dados[i].length; j++){
-//         posicao=dados[i].toString().toLowerCase().split(",")
-//     }
-//     console.log(posicao)
-// }; 
+let position = [];
+for (let i = 0; i < dados.length; i++) {
+  for (let j = 0; j < dados[i].length; j++) {
+    for(let k = 0; k < dados[j].length; k++) {
+      if (dados[i][j][k] === dados[i][j][k].toLowerCase()) {
+        console.log(`${dados[i][j][k]} já é um LowerCase`);
+      } else {
+        console.log(`${dados[i][j][k]} não é um LowerCase`);
+      }
+      if (dados[i][j][k] !== dados[i][j][k].toLowerCase()) {
+        position = dados.toString().toLowerCase().split('/');
+      }
+    }
+  }
+} console.log(position);
 
 // let dadosTratados = dadosFinais.toLowerCase();
 // console.log(dadosTratados);
