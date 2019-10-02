@@ -5,12 +5,37 @@
 // 16 17 18 19 20
 // 21 22 23 24 25
 
+// const matrix = []
+// let count = 1;
+// for (let i = 0; i < 5; i++) {
+//   const line = []
+//   for (let j = 0; j < 5; j++) {
+//     line[j] = count
+//     count++
+//   }
+//   matrix[i] = line
+// }
+// console.log(matrix);
+
 // 2 - Agora inverta o loop e gere números de 25 a 1
 // [ [ 25, 24, 23, 22, 21 ],
 //   [ 20, 19, 18, 17, 16 ],
 //   [ 15, 14, 13, 12, 11 ],
 //   [ 10, 9, 8, 7, 6 ],
 //   [ 5, 4, 3, 2, 1 ] ]
+
+// const matrix = []
+// let count = 1;
+// for (let i = 0; i < 5; i++) {
+//   const line = []
+//   for (let j = 0; j < 5; j++) {
+//     line[j] = count
+//     count++
+//   }
+//   matrix[i] = line
+//   line.reverse();
+// }
+// console.log(matrix.reverse());
 
 // 3 - Retorne o valor mais alto das somas entre o total de valors por linha, de uma array 4x4.
 //const arr4x4 = [[23, 56, 9, 0], [8, 24, 50, 5], [9, 10, 40, 7], [9, 48, 15, 2]]
@@ -19,6 +44,38 @@
 // 5 6 6 7
 // 9 9 9 9
 // Resultado esperado -> 36
+
+//OLHAR ESSE CÓDIGO COM O DA AMANDA
+// const matrix = []
+// let count = 1;
+// let soma = [];
+// let accumulator = 0;
+// let currentValue = 0;
+// const reducer = (accumulator, currentValue) => accumulator + currentValue;
+// for (let i = 0; i < 4; i++) {
+//     const line = []
+
+//     for (let j = 0; j < 4; j++) {
+//         line[j] = count
+//         count++
+//     }
+//     matrix[i] = line;
+//     soma.push(line);
+//     console.log(line.reduce(reducer));
+// }
+// console.log(Math.max(...soma));
+
+//CODIGO DA AMANDA
+// const arr4x4 = [[23, 56, 9, 0], [8, 24, 50, 5], [9, 10, 40, 7], [9, 48, 15, 2]]
+// let soma = [];
+// for(let i = 0; i < arr4x4.length; i++){
+//     let linha = 0;
+//     for(let j = 0; j < arr4x4.length; j++ ){
+//         linha+=arr4x4[i][j]
+//     }
+//     soma.push(linha)
+//     console.log(soma)
+// }console.log("O valor mais alto entre as somas é: ", Math.max(...soma))
 
 // 4 - Recebemos dados do front-end, que foram salvos na const abaixo.
 // para salvar no banco de dados, primeiro, precisamos criar uma função que verifica
@@ -30,14 +87,31 @@
 // valores lowercase. Crie uma função que checa em uma array bidimensional se todas as strings
 // estão obedecendo as regras da tabela. E caso nao estejam, modifique a string para que possam ser
 // salvas no banco.
-// const dados = [
-//   ["Antonia Maria", "ar@gol.com", "Engenheira"],
-//   ["Joana Maranhão", "ar@gol.com", "Engenheira de software"],
-//   ["Juliana Paes", "argh@gol.com", "Advogada"],
-//   ["mariana DA SILVA", "mariana@gmail.com", "MEDICA"],
-//   ["MARINA BATISTA", "marina@gol.com", "professora"],
-//   ["Antonia Maria", "ari@gol.com", "cientista"]
-// ]
+
+const dados = [
+  ["Antonia Maria", "ar@gol.com", "Engenheira"],
+  ["Joana Maranhão", "ar@gol.com", "Engenheira de software"],
+  ["Juliana Paes", "argh@gol.com", "Advogada"],
+  ["mariana DA SILVA", "mariana@gmail.com", "MEDICA"],
+  ["MARINA BATISTA", "marina@gol.com", "professora"],
+  ["Antonia Maria", "ari@gol.com", "cientista"]
+];
+// let dadosString = dados.toString();
+// let dadosLower = dadosString.toLowerCase(); 
+// console.log(dadosString);
+// console.log(dadosLower);
+
+//CODIGO DAS MENINAS
+// let posicao = "";
+// for(let i=0; i < dados.length; i++){
+//     for(let j=0; j<dados[i].length; j++){
+//         posicao=dados[i].toString().toLowerCase().split(",")
+//     }
+//     console.log(posicao)
+// }; 
+
+// let dadosTratados = dadosFinais.toLowerCase();
+// console.log(dadosTratados);
 
 // 6 - Printe no console os números que são múltiplos de 3.
 //  - os que são multiplos de 3 e 5.
