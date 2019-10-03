@@ -8,6 +8,43 @@
 // com pelo menos 4 propriedades e 1 método
 // ref: https://pt.wikipedia.org/wiki/Lista_de_Pok%C3%A9mon
 
+const pokemon = {
+    nomeInternacional: aron,
+    nomeJapao: cokodora,
+    evolucao: ovo,
+    numeroHoenn: 070,
+    tipoPokeAço: true,
+    pokeFala1: function() {
+        console.log('Oi, meu nome é ' + pokemon.nomeInternacional + 'e meu nome em japonês é ' + pokemon.nomeJapao);
+    }
+    pokeFala2: function() {
+        console.log('Esse Pokemon sabe voar? S/N')
+        if('S'){
+
+        }else{
+            console.log('Desculpa, nao sei voar');
+        }        
+    }
+    actionPoke: ["FIGHT", "BAG", "RUN"]
+    let random: (random) Math.random(actionPoke)
+
+    acao: function(){
+        console.log('Cabeçada de Pedra!')
+    }
+    pergunta: function(){
+        console.log('O que o ' + pokemon.nomeInternacional + ' vai fazer?')
+        return acao;
+    }
+};
+
+for(const item in pokemon){
+	console.log(pokemon[item])
+}
+
+for(const item in pokemon){
+	console.log(item, pokemon[item])
+}
+
 // 2.
 // Printe no console a seguinte
 // frase: "Oi, meu nome é  < >.
