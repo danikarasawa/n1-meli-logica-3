@@ -101,6 +101,59 @@ console.log(ordenados)
 // }
 
 // 11 - Crie uma função que Imprima o mais barato
+<<<<<<< HEAD
 
 console.log(ordenados[0], ordenados[ordenados.length-1])
 // 12 - Crie uma função que Imprima o mais caro
+=======
+// 12 - Crie uma função que Imprima o mais caro.
+
+function Terreno(largura, comprimento) {
+  this.largura = largura
+  this.comprimento = comprimento
+  this.area = largura * comprimento
+}
+
+Terreno.prototype.calcularPreco = function() {
+  this.preco = this.area * 1000
+}
+
+Terreno.prototype.mostrarInfos = function() {
+  console.log(`a area é ${this.area} e o preco é: ${this.preco}`)
+}
+
+const t1 = new Terreno(30, 20)
+const t2 = new Terreno(10, 50)
+const t3 = new Terreno(34, 200)
+const t4 = new Terreno(33, 19)
+const t5 = new Terreno(3, 2)
+
+t1.calcularPreco()
+t2.calcularPreco()
+t3.calcularPreco()
+t4.calcularPreco()
+t5.calcularPreco()
+
+const terrenos = []
+terrenos.push(t1, t2, t3, t4, t5)
+
+// console.log(terrenos)
+// console.log(terrenos[2])
+
+// for (const item of terrenos) {
+//   console.log(item.mostrarInfos()
+// }
+
+// for (let i = 0; i < terrenos.length; i++) {
+//   console.log(terrenos[i].mostrarInfos())
+// }
+
+function ordenaTerrenos(arrTerrenos) {
+  const ordenados = arrTerrenos.sort(function(a, b) {
+    return a.preco - b.preco
+  })
+  console.log(ordenados[0], ordenados[ordenados.length - 1])
+}
+
+ordenaTerrenos(terrenos)
+>>>>>>> 269b92f2cb0ed60d30fc2ab02eaf548a0ebc358e
